@@ -51,29 +51,35 @@ public class Principal extends AppCompatActivity {
     }
 
     public boolean validar(){
-        double cant = Double.parseDouble(cantidad.getText().toString());
 
-        if (cant <= 0 ){
+        if (cantidad.getText().toString().isEmpty() ){
             cantidad.requestFocus();
             cantidad.setError(recursos.getString(R.string.error_numero1));
             return false;
         }
+
+        if ( Double.parseDouble(cantidad.getText().toString()) <= 0 ){
+            cantidad.requestFocus();
+            cantidad.setError(recursos.getString(R.string.error_numero1));
+            return false;
+        }
+
         return  true;
 
     }
 
     public void calcular(View v){
-        double cant, valor=0;
+        double cant;
         resultado.setText("");
 
         int opciones_genero,opciones_tipo,opciones_marca;
-        cant=Double.parseDouble(cantidad.getText().toString());
 
         opciones_genero=genero_sp.getSelectedItemPosition();
         opciones_tipo=tipo_sp.getSelectedItemPosition();
         opciones_marca=marca_sp.getSelectedItemPosition();
 
         if (validar()){
+            cant=Double.parseDouble(cantidad.getText().toString());
             double valores = metodo.calculo(cant,opciones_genero,opciones_tipo,opciones_marca);
             resultado.setText(""+String.format("%.2f",valores));
         }
