@@ -2,5 +2,36 @@
     <string name="app_name">tallerzapatos</string>
     <string name="titulo">Venta de Zapatos</string>
     <string name="genero">Genero</string>
-    <string name="tipoz">Tipo Zapato</string>
+    <string name="tipoz">Tipo</string>
+    <string name="marca">Marca</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="total">Total a pagar</string>
+    <string name="error_numero1">Digite un valor valido</string>
+
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+
+    <string-array name="listagenero">
+        <item>@string/hombre</item>
+        <item>@string/mujer</item>
+    </string-array>
+
+    <string name="zapatilla">Zapatilla</string>
+    <string name="clasico">Clasico</string>
+
+    <string-array name="listatipo">
+        <item>@string/zapatilla</item>
+        <item>@string/clasico</item>
+    </string-array>
+
+    <string name="nike">Nike</string>
+    <string name="adiddas">Adiddas</string>
+    <string name="puma">Puma</string>
+
+    <string-array name="listamarca">
+        <item>@string/nike</item>
+        <item>@string/adiddas</item>
+        <item>@string/puma</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tallerzapatos</string>
+    <string name="titulo">" Shoe sale"</string>
+    <string name="genero">Gender</string>
+    <string name="tipoz">Type</string>
+    <string name="marca">Brand</string>
+    <string name="cantidad">Quantity</string>
+    <string name="total">" Total to pay"</string>
+    <string name="hombre">Man</string>
+    <string name="mujer">Woman</string>
+    <string name="zapatilla">Shoe</string>
+    <string name="clasico">" Classic"</string>
+    <string name="nike">Nike</string>
+    <string name="adiddas">Adiddas</string>
+    <string name="puma">Puma</string>
+</resources>
