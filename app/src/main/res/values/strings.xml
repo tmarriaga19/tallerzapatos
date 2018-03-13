@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">tallerzapatos</string>
+    <string name="titulo">Venta de Zapatos</string>
+    <string name="genero">Genero</string>
+    <string name="tipoz">Tipo Zapato</string>
+</resources>
