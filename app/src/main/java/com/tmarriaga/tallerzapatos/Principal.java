@@ -58,7 +58,6 @@ public class Principal extends AppCompatActivity {
             cantidad.setError(recursos.getString(R.string.error_numero1));
             return false;
         }
-
         return  true;
     }
 
@@ -126,7 +125,7 @@ public class Principal extends AppCompatActivity {
                                 case 0:/*nike*/
                                     valor = metodo.total_pago(cant, 60000);
                                     break;
-                                case 1:/*adiddas*/
+                                case 1:/*adidas*/
                                     valor = metodo.total_pago(cant, 70000);
                                     break;
                                 case 2:/*puma*/
