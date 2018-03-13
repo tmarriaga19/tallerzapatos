@@ -59,12 +59,13 @@ public class Principal extends AppCompatActivity {
             return false;
         }
         return  true;
+
     }
 
-
-    public void calculo(View v){
+    public void calcular(View v){
         double cant, valor=0;
-        resultado.setText("");/*setear la caja*/
+        resultado.setText("");
+
         int opciones_genero,opciones_tipo,opciones_marca;
         cant=Double.parseDouble(cantidad.getText().toString());
 
@@ -72,73 +73,15 @@ public class Principal extends AppCompatActivity {
         opciones_tipo=tipo_sp.getSelectedItemPosition();
         opciones_marca=marca_sp.getSelectedItemPosition();
 
-        if (validar()) {
-            switch (opciones_genero) {
-                case 0:/*hombre*/
-                    switch (opciones_tipo) {
-                        case 0:/*zapatilla*/
-                            switch (opciones_marca) {
-                                case 0:/*nike*/
-                                    valor = metodo.total_pago(cant, 120000);
-                                    break;
-                                case 1:/*adiddas*/
-                                    valor = metodo.total_pago(cant, 140000);
-                                    break;
-                                case 2:/*puma*/
-                                    valor = metodo.total_pago(cant, 130000);
-                                    break;
-                            }
-                            break;
-                        case 1:/*clasico*/
-                            switch (opciones_marca) {
-                                case 0:/*nike*/
-                                    valor = metodo.total_pago(cant, 50000);
-                                    break;
-                                case 1:/*adiddas*/
-                                    valor = metodo.total_pago(cant, 80000);
-                                    break;
-                                case 2:/*puma*/
-                                    valor = metodo.total_pago(cant, 100000);
-                                    break;
-                            }
-                            break;
-                    }
-
-                    break;
-                case 1:/*mujer*/
-                    switch (opciones_tipo) {
-                        case 0:/*zapatilla*/
-                            switch (opciones_marca) {
-                                case 0:/*nike*/
-                                    valor = metodo.total_pago(cant, 110000);
-                                    break;
-                                case 1:/*adiddas*/
-                                    valor = metodo.total_pago(cant, 130000);
-                                    break;
-                                case 2:/*puma*/
-                                    valor = metodo.total_pago(cant, 110000);
-                                    break;
-                            }
-                            break;
-                        case 1:/*clasico*/
-                            switch (opciones_marca) {
-                                case 0:/*nike*/
-                                    valor = metodo.total_pago(cant, 60000);
-                                    break;
-                                case 1:/*adidas*/
-                                    valor = metodo.total_pago(cant, 70000);
-                                    break;
-                                case 2:/*puma*/
-                                    valor = metodo.total_pago(cant, 120000);
-                                    break;
-                            }
-                            break;
-                    }
-
-                    break;
-            }
+        if (validar()){
+            double valores = metodo.calculo(cant,opciones_genero,opciones_tipo,opciones_marca);
+            resultado.setText(""+String.format("%.2f",valores));
         }
-        resultado.setText(""+String.format("%.2f",valor));
+
 
     }
+
+
+
+
 }
